@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="mainApp">
+        <div class="table">
+            <div class="table-header">
+                <div class="table-row">
+                    <div class="table-cell">Deck #1</div>
+                    <div class="table-cell">Deck #2</div>
+                </div>
+            </div>
+            <div class="table-body">
+                <div class="table-row">
+                    <div class="table-cell"><textarea v-model="deck1" id="deck1" v-on:input="updateList"></textarea></div>
+                    <div class="table-cell"><textarea v-model="deck2" id="deck2" v-on:input="updateList"></textarea></div>
+                </div>
+            </div>
+        </div>
+
+        <button id="compare" v-on:click="updateList">Compare!</button>
+
+        <div class="table" id="results">
+            <div class="table-body">
+                <div class="table-row">
+                    <div class="table-cell">{{onlyDeck1}}</div>
+                    <div class="table-cell">{{common}}</div>
+                    <div class="table-cell">{{onlyDeck2}}</div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="js/comparel.js"></script>
+    </body>
+</html>

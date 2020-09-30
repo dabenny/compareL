@@ -1,0 +1,14 @@
+.table { display: table; width: 100%; }
+.table-header { display: table-header-group; }
+.table-body { display: table-row-group; }
+.table-row { display: table-row; }
+.table-cell { display: table-cell; }
+.table-header .table-cell { font-weight: bold; }
+textarea { width: 98%; min-height: 200px; }
+.number { display: inline-block; min-width: 40px; margin-right: 4px; text-align: right; }
+.added .number { color: green; }
+.total.removed { opacity: 0.5; }
+.removed .number { color: red; }
+.added .number,.removed .number { font-weight: bold; }
+.unchanged .number::before { content('='); }
+.added .number::before { content('+'); }
